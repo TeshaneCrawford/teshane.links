@@ -14,5 +14,16 @@ export default defineAppConfig({
         'instagram': ''
       },
     },
+    icon: {
+      size: '', // default <Icon> size applied
+      class: '', // default <Icon> class applied
+      mode: '', // default <Icon> mode applied
+      aliases: {
+        'twitter': 'line-md:twitter-x-alt',
+      },
+      // customize: (content: string, name: string, prefix: string, provider: string) => {
+      //   // ...
+      // },
+    }
   },
 })
