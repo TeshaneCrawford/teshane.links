@@ -11,7 +11,7 @@ export default defineAppConfig({
     },
     main: {
       socialIcon: {
-        'instagram': ''
+        instagram: '',
       },
     },
     icon: {
@@ -19,11 +19,11 @@ export default defineAppConfig({
       class: '', // default <Icon> class applied
       mode: '', // default <Icon> mode applied
       aliases: {
-        'twitter': 'line-md:twitter-x-alt',
+        twitter: 'line-md:twitter-x-alt',
       },
       // customize: (content: string, name: string, prefix: string, provider: string) => {
       //   // ...
       // },
-    }
+    },
   },
 })
