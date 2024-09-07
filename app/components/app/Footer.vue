@@ -19,7 +19,7 @@ const currentYear = new Date()
           href="https://twitter.com/TeshaneCrawford"
         >
           <Icon
-            name="i-line-md:twitter-x-alt"
+            name="i-uil-twitter-alt"
             class="w-4 dark:fill-white"
           />
         </a>
