@@ -1,75 +1,14 @@
-# Nuxt 3 Minimal Starter
+# Teshane Crawford
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**[teshanecrawford.me](https://teshanecrawford.me)**
 
-## Setup
+Links website, built with [Nuxtv3](https://nuxt.com/), [Vue.js 3](https://vuejs.org/), [UnoCSS](https://unocss.dev), and [NuxtHub](https://hub.nuxt.com/) with [Cloudflare](https://www.cloudflare.com/).
+<br>
 
-Make sure to install the dependencies:
+<samp>Code is licensed under <a href='./LICENSE'>MIT</a>,<br> Words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a></samp>.
 
-```bash
-# npm
-npm install
+## Activity
 
-# pnpm
-pnpm install
+Recent activity this repository.
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+![Statistic from this repository](https://repobeats.axiom.co/api/embed/3d7f48695b160093c6e391e89594b2f2bde0d5a3.svg "Repobeats analytics image")
