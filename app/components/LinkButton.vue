@@ -45,7 +45,7 @@ const copyToClipboard = async () => {
       duration: 2000,
     })
   }
-  catch (err) {
+  catch {
     toast.add({
       title: 'Failed to copy',
       description: 'Please try again or copy the link manually.',
