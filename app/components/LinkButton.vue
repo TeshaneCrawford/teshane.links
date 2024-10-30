@@ -1,117 +1,109 @@
-<script lang="ts" setup>
-const { data: AppConfig } = await useFetch('/api/siteConfig')
+<script setup lang="ts">
+interface Link {
+  name: string
+  url: string
+  icon: string
+}
 
-// const showShare = ref(false)
+const props = defineProps<{
+  link: Link
+}>()
 
-// const toggleShare = () => {
-//   showShare.value = !showShare.value
-// }
+const { copy } = useClipboard()
+const toast = useToast()
+
+const shareLink = async () => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: props.link.name,
+        url: props.link.url,
+      })
+      toast.add({
+        title: 'Shared successfully!',
+        description: `${props.link.name} link has been shared.`,
+        duration: 2000,
+      })
+    }
+    catch (err) {
+      if (err instanceof Error && err.name !== 'AbortError') {
+        await copyToClipboard()
+      }
+    }
+  }
+  else {
+    await copyToClipboard()
+  }
+}
+
+const copyToClipboard = async () => {
+  try {
+    await copy(props.link.url)
+    toast.add({
+      title: 'Link copied!',
+      description: `${props.link.name} link has been copied to your clipboard.`,
+      duration: 2000,
+    })
+  }
+  catch (err) {
+    toast.add({
+      title: 'Failed to copy',
+      description: 'Please try again or copy the link manually.',
+      duration: 3000,
+    })
+  }
+}
 </script>
 
 <template>
-  <div
-    flex
-    flex-col
-    gap-4
+  <NuxtLink
+    :to="link.url"
+    external
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group relative w-full flex items-center justify-between gap-4 overflow-hidden rounded-lg p-4 transition-all duration-400"
+    :aria-label="`Open ${link.name} link in new tab`"
   >
-    <!-- <div
-      v-for="links in AppConfig?.link"
-      :key="links.name"
-    >
-      <NuxtLink
-        flex
-        justify-between
-        icon-btn
-        :to="links.url"
-      >
-        <Icon
-          :name="links.icon"
-          size="2rem"
-        />
-        <span class="text-lg font-semibold">
-          {{ links.name }}
-        </span>
-
-        <Icon
-          name="uil-share-alt"
-          size="2rem"
-          @click="toggleShare"
-        />
-      </NuxtLink> -->
-    <!-- <div v-if="showShare">
-        <SocialShare
-          v-for="network in ['facebook', 'twitter', 'linkedin', 'email']"
-          :key="network"
-          :network="network"
-          :styled="true"
-          :label="true"
-        >
-          <template #label>
-            {{ network }}
-          </template>
-        </SocialShare>
-      </div> -->
+    <!-- Base button styling -->
     <div
-      v-for="links in AppConfig?.link"
-      :key="links.name"
-      class=""
-    >
-      <NuxtLink
-        :to="links.url"
-        class="button"
-        external
-        target="blank"
+      class="absolute inset-0 bg-dark-900 transition-transform duration-400 group-hover:translate-x-[2%] group-hover:translate-y-[5%] group-hover:scale-110 dark:bg-light-900"
+      aria-hidden="true"
+    />
+
+    <!-- Blur effect -->
+    <div
+      class="absolute bottom-0 right-0 h-8 w-8 translate-x-2 translate-y-2 rounded-full bg-white/15 backdrop-blur transition-all duration-400 group-hover:h-full group-hover:w-full group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rounded-lg dark:bg-dark/15"
+      aria-hidden="true"
+    />
+
+    <!-- Content container -->
+    <div class="relative w-full flex items-center gap-4">
+      <!-- Left icon -->
+      <div class="h-8 w-8 flex items-center justify-center">
+        <Icon
+          :name="link.icon"
+          class="h-6 w-6 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-50"
+        />
+      </div>
+
+      <!-- Link text -->
+      <span
+        class="flex-1 text-center text-base text-light-50 font-medium transition-colors duration-300 md:text-lg dark:text-dark-50 group-hover:text-light-100 dark:group-hover:text-dark-100"
       >
-        <div class="button__content gap-24 md:gap-48">
-          <Icon
-            :name="links.icon"
-            size="2rem"
-            class="button__icon"
-          />
-          <span class="button__text">{{ links.name }}</span>
+        {{ link.name }}
+      </span>
 
-          <div class="button__reflection-1" />
-          <div class="button__reflection-2" />
-        </div>
-
-        <img
-          src="/star.png"
-          alt=""
-          class="button__star-1"
-        >
-        <img
-          src="/star.png"
-          alt=""
-          class="button__star-2"
-        >
-        <img
-          src="/circle.png"
-          alt=""
-          class="button__circle-1"
-        >
-        <img
-          src="/circle.png"
-          alt=""
-          class="button__circle-2"
-        >
-        <img
-          src="/diamond.png"
-          alt=""
-          class="button__diamond"
-        >
-        <img
-          src="/triangle.png"
-          alt=""
-          class="button__triangle"
-        >
-
-        <div class="button__shadow" />
-      </NuxtLink>
+      <!-- Share button -->
+      <button
+        class="h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 hover:bg-white/10 dark:hover:bg-black/10"
+        :aria-label="`Share ${link.name} link`"
+        @click.prevent="shareLink"
+      >
+        <Icon
+          name="i-uil-share-alt"
+          class="h-5 w-5 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-50"
+        />
+      </button>
     </div>
-  </div>
-  <!-- </div> -->
+  </NuxtLink>
 </template>
-
-<style scoped>
-
-</style>

@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     '@nuxt/icon',
     '@nuxt/fonts',
+    '@vueuse/nuxt',
     '@stefanobartoletti/nuxt-social-share',
   ],
 

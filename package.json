@@ -31,6 +31,8 @@
     "@iconify-json/uil": "^1.2.0",
     "@unocss/eslint-config": "^0.62.3",
     "@unocss/nuxt": "^0.62.3",
+    "@vueuse/core": "^11.2.0",
+    "@vueuse/nuxt": "^11.2.0",
     "feed": "^4.2.2",
     "typescript": "^5.5.4",
     "unocss": "^0.62.3",

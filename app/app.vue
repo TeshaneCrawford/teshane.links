@@ -30,6 +30,7 @@ useHead({
     <AppBgNoise />
     <AppLayout>
       <NuxtPage />
+      <AppToastNotification />
     </AppLayout>
   </div>
 </template>
