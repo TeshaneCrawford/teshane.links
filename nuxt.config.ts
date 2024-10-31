@@ -87,11 +87,6 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
-  socialShare: {
-    baseUrl: 'https://teshanecrawford.com', // required!
-    // other optional module options
-  },
-
   ssr: true,
 
   experimental: {
