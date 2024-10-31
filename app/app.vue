@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
   bodyAttrs: {
-    class: 'font-sans antialiased text-gray-6 dark:text-gray-2',
+    class: 'font-sans antialiased text-neutral-6 dark:text-neutral-2',
   },
   htmlAttrs: {
     lang: 'en',

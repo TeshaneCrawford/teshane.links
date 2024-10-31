@@ -66,13 +66,13 @@ const copyToClipboard = async () => {
   >
     <!-- Base button styling -->
     <div
-      class="absolute inset-0 bg-dark-900 transition-transform duration-400 group-hover:translate-x-[2%] group-hover:translate-y-[5%] group-hover:scale-110 dark:bg-light-900"
+      class="absolute inset-0 bg-dark-5 transition-transform duration-400 group-hover:translate-x-[2%] group-hover:translate-y-[5%] group-hover:scale-110 dark:bg-light-800"
       aria-hidden="true"
     />
 
     <!-- Blur effect -->
     <div
-      class="absolute bottom-0 right-0 h-8 w-8 translate-x-2 translate-y-2 rounded-full bg-white/15 backdrop-blur transition-all duration-400 group-hover:h-full group-hover:w-full group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rounded-lg dark:bg-dark/15"
+      class="absolute bottom-0 right-0 h-8 w-8 translate-x-2 translate-y-2 rounded-full bg-white/10 backdrop-blur transition-all duration-400 group-hover:h-full group-hover:w-full group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rounded-lg dark:bg-dark/10"
       aria-hidden="true"
     />
 
@@ -82,7 +82,7 @@ const copyToClipboard = async () => {
       <div class="h-8 w-8 flex items-center justify-center">
         <Icon
           :name="link.icon"
-          class="h-6 w-6 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-50"
+          class="h-6 w-6 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-100"
         />
       </div>
 
@@ -101,7 +101,7 @@ const copyToClipboard = async () => {
       >
         <Icon
           name="i-uil-share-alt"
-          class="h-5 w-5 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-50"
+          class="h-5 w-5 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-100"
         />
       </button>
     </div>
