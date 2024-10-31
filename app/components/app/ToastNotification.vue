@@ -1,4 +1,3 @@
-<!-- components/ToastNotification.vue -->
 <script setup lang="ts">
 const { toasts } = useToast()
 </script>
