@@ -26,7 +26,7 @@ export default defineConfig({
   ],
   theme: {
     fontFamily: {
-      sans: 'DM Sans',
+      sans: 'Architects Daughter',
     },
     colors: {
     },
