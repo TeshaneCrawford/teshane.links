@@ -15,11 +15,26 @@ export default defineConfig({
     ['btn-backdrop', 'absolute bottom-0 right-0 bg-white/15 backdrop-blur transition-all duration-400'],
     ['btn-content', 'relative flex w-full items-center gap-4'],
   ],
+  rules: [
+    ['rounded-custom', {
+      'border-radius': '15px 225px 255px 15px 15px 255px 225px 15px',
+      'border-bottom-left-radius': '15px 255px',
+      'border-bottom-right-radius': '225px 15px',
+      'border-top-left-radius': '255px 15px',
+      'border-top-right-radius': '15px 225px',
+    }],
+  ],
   theme: {
     fontFamily: {
       sans: 'DM Sans',
     },
     colors: {
+    },
+    transitionDuration: {
+      235: '235ms',
+    },
+    borderRadius: {
+      custom: '15px 225px 255px 15px 15px 255px 225px 15px',
     },
   },
   presets: [
@@ -37,5 +52,37 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
+  ],
+  safelist: [
+
+    // Shadows
+    'shadow-[rgba(0,0,0,0.2)_15px_28px_25px_-18px]',
+    'hover:shadow-[rgba(0,0,0,0.3)_2px_8px_8px_-5px]',
+    'focus:shadow-[rgba(0,0,0,0.3)_2px_8px_4px_-6px]',
+
+    // Transitions
+    'duration-235',
+    'ease-in-out',
+
+    // Transforms
+    'hover:translate-y-0.5',
+
+    // Dark mode variants
+    'dark:bg-dark-800',
+    'dark:border-gray-200',
+    'dark:text-gray-200',
+    'dark:hover:bg-white/10',
+
+    // Interactive states
+    'group-hover:scale-110',
+
+    // Basic utilities that might be purged
+    'w-full',
+    'p-3',
+    'border-2',
+    'border-solid',
+    'border-gray-800',
+    'select-none',
+    'cursor-pointer',
   ],
 })

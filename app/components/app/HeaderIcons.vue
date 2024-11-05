@@ -10,7 +10,7 @@ const { data: AppConfig } = await useFetch('/api/siteConfig')
     <div
       v-for="social in AppConfig?.socials"
       :key="social.platform"
-      class="group flex items-center border border-rounded bg-white/60 p-2 dark:bg-white/10 hover:bg-gray-50 dark:hover:bg-white/5"
+      class="group rounded-custom flex items-center border border-dark/80 bg-white/60 p-2 dark:border-gray-300 dark:bg-white/10 hover:bg-gray-50 dark:hover:bg-white/5"
     >
       <NuxtLink
         :to="social.link"

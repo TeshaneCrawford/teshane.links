@@ -27,9 +27,9 @@ useHead({
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <AppBgNoise />
     <AppLayout>
       <NuxtPage />
+      <AppBgNoise />
       <AppToastNotification />
     </AppLayout>
   </div>

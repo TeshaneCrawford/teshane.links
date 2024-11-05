@@ -4,7 +4,7 @@ const { data: AppConfig } = await useFetch('/api/siteConfig')
 
 <template>
   <header
-    class="animate-slide-from-down-and-fade-1 max-w-3xl w-full flex flex-row items-center justify-between space-y-0 md:px-0"
+    class="max-w-3xl w-full flex flex-row animate-fade-in items-center justify-between space-y-0 md:px-0"
   >
     <div class="flex flex-row items-center space-x-3">
       <img
@@ -12,7 +12,7 @@ const { data: AppConfig } = await useFetch('/api/siteConfig')
         :alt="`${AppConfig?.name} headshot`"
         width="100"
         height="100"
-        class="h-[48px] w-[48px] rounded-full"
+        class="rounded-custom h-[48px] w-[48px]"
       >
       <div
         v-if="AppConfig?.name"

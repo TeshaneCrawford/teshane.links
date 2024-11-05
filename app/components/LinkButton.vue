@@ -61,47 +61,35 @@ const copyToClipboard = async () => {
     external
     target="_blank"
     rel="noopener noreferrer"
-    class="group relative w-full flex items-center justify-between gap-4 overflow-hidden rounded-lg p-4 transition-all duration-400"
+    class="group rounded-custom relative w-full flex cursor-pointer select-none items-center justify-between gap-4 overflow-hidden border-1 border-dark/80 border-solid bg-white/10 p-3 shadow-[rgba(0,0,0,0.2)_15px_28px_25px_-18px] transition-all duration-235 ease-in-out hover:translate-y-0.5 dark:border-gray-300 dark:bg-dark/50 md:p-5 focus:shadow-[rgba(0,0,0,0.3)_2px_8px_4px_-6px] hover:shadow-[rgba(0,0,0,0.3)_2px_8px_8px_-5px]"
     :aria-label="`Open ${link.name} link in new tab`"
   >
-    <!-- Base button styling -->
-    <div
-      class="absolute inset-0 bg-dark-5 transition-transform duration-400 group-hover:translate-x-[2%] group-hover:translate-y-[5%] group-hover:scale-110 dark:bg-light-800"
-      aria-hidden="true"
-    />
-
-    <!-- Blur effect -->
-    <div
-      class="absolute bottom-0 right-0 h-8 w-8 translate-x-2 translate-y-2 rounded-full bg-white/10 backdrop-blur transition-all duration-400 group-hover:h-full group-hover:w-full group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rounded-lg dark:bg-dark/10"
-      aria-hidden="true"
-    />
-
     <!-- Content container -->
     <div class="relative w-full flex items-center gap-4">
       <!-- Left icon -->
       <div class="h-8 w-8 flex items-center justify-center">
         <Icon
           :name="link.icon"
-          class="h-6 w-6 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-100"
+          class="h-6 w-6 text-gray-800 transition-transform duration-300 group-hover:scale-110 dark:text-gray-200"
         />
       </div>
 
       <!-- Link text -->
       <span
-        class="flex-1 text-center text-base text-light-50 font-medium transition-colors duration-300 md:text-lg dark:text-dark-50 group-hover:text-light-100 dark:group-hover:text-dark-100"
+        class="flex-1 text-center text-base text-gray-800 font-medium font-sans md:text-lg dark:text-gray-200"
       >
         {{ link.name }}
       </span>
 
       <!-- Share button -->
       <button
-        class="h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 hover:bg-white/10 dark:hover:bg-black/10"
+        class="h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 hover:bg-black/10 dark:hover:bg-white/10"
         :aria-label="`Share ${link.name} link`"
         @click.prevent="shareLink"
       >
         <Icon
           name="i-uil-share-alt"
-          class="h-5 w-5 text-light-50 transition-transform duration-300 group-hover:scale-110 dark:text-dark-100"
+          class="h-5 w-5 text-gray-800 transition-transform duration-300 group-hover:scale-110 dark:text-gray-200"
         />
       </button>
     </div>
