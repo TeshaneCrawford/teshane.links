@@ -20,7 +20,7 @@ const currentYear = new Date()
         >
           <Icon
             name="i-uil-twitter-alt"
-            class="h-5 w-4 dark:fill-white"
+            class="h-5 w-5 dark:fill-white"
           />
         </a>
         <a
