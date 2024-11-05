@@ -12,7 +12,7 @@ const { data: AppConfig } = await useFetch('/api/siteConfig')
         :alt="`${AppConfig?.name} headshot`"
         width="100"
         height="100"
-        class="rounded-custom h-[48px] w-[48px]"
+        class="h-[48px] w-[48px] rounded-custom"
       >
       <div
         v-if="AppConfig?.name"

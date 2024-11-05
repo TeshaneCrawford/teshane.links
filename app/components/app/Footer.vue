@@ -20,7 +20,7 @@ const currentYear = new Date()
         >
           <Icon
             name="i-uil-twitter-alt"
-            class="w-4 dark:fill-white"
+            class="h-5 w-4 dark:fill-white"
           />
         </a>
         <a
@@ -29,7 +29,7 @@ const currentYear = new Date()
           href="https://github.com/TeshaneCrawford"
         ><Icon
           name="uil-github-alt"
-          class="h-5 w-4 dark:fill-white"
+          class="h-5 w-5 dark:fill-white"
         />
         </a>
         <a
@@ -39,7 +39,7 @@ const currentYear = new Date()
           title="RSS Feed"
         ><Icon
           name="i-uil-rss"
-          class="h-5 w-4 dark:fill-white"
+          class="h-5 w-5 dark:fill-white"
         />
         </a>
         <a><AppThemeSwitch /></a>

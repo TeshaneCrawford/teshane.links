@@ -12,9 +12,9 @@ export const AppConfig: SiteConfig = {
   name: 'Teshane Crawford',
   headshot: 'https://github.com/TeshaneCrawford.png',
   title: 'Software Developer',
-  description: `I'm Teshane Crawford, a software developer with 3 years of experience building
+  description: `I'm Teshane Crawford, a software developer with experience building
   user-friendly applications. I work with C#, JavaScript, and frameworks like ASP.NET Core, Vue.js and React.
-  When I'm not coding, I enjoy traveling and cooking international cuisine, bringing unique perspectives to my projects.`,
+  When I'm not coding, I enjoy going out into nature on adventures, bringing unique perspectives to my projects.`,
   socials: [
     {
       platform: 'GitHub',
@@ -33,12 +33,12 @@ export const AppConfig: SiteConfig = {
     },
     {
       platform: 'X',
-      link: 'https://twitter.com/_d_shybrid',
+      link: 'https://twitter.com/TeshaneCrawford',
       icon: 'i-uil-twitter-alt',
     },
     {
       platform: 'Instagram',
-      link: 'https://www.instagram.com/teshanecrawford/',
+      link: 'https://www.instagram.com/crawfordteshane/',
       icon: 'i-uil-instagram',
     },
     {
@@ -75,7 +75,7 @@ export const AppConfig: SiteConfig = {
     {
       name: 'Spotify',
       url: 'https://open.spotify.com/user/cuxvsqmmm9fylq0h6p2ag1ozo',
-      icon: 'i-line-md:spotify',
+      icon: 'i-line-md-spotify',
       shareUrl: '',
     },
   ],
