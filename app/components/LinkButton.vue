@@ -61,7 +61,7 @@ const copyToClipboard = async () => {
     external
     target="_blank"
     rel="noopener noreferrer"
-    class="group rounded-custom relative w-full flex cursor-pointer select-none items-center justify-between gap-4 overflow-hidden border-1 border-dark/80 border-solid bg-white/10 p-3 shadow-[rgba(0,0,0,0.2)_15px_28px_25px_-18px] transition-all duration-235 ease-in-out hover:translate-y-0.5 dark:border-gray-300 dark:bg-dark/50 md:p-5 focus:shadow-[rgba(0,0,0,0.3)_2px_8px_4px_-6px] hover:shadow-[rgba(0,0,0,0.3)_2px_8px_8px_-5px]"
+    class="group relative w-full flex cursor-pointer select-none items-center justify-between gap-4 overflow-hidden border-1 border-dark/80 border-solid bg-white/10 p-3 shadow-[rgba(0,0,0,0.2)_15px_28px_25px_-18px] transition-all duration-235 ease-in-out rounded-custom hover:translate-y-0.5 dark:border-gray-300 dark:bg-dark/50 md:p-5 focus:shadow-[rgba(0,0,0,0.3)_2px_8px_4px_-6px] hover:shadow-[rgba(0,0,0,0.3)_2px_8px_8px_-5px]"
     :aria-label="`Open ${link.name} link in new tab`"
   >
     <!-- Content container -->
@@ -88,7 +88,7 @@ const copyToClipboard = async () => {
         @click.prevent="shareLink"
       >
         <Icon
-          name="i-uil-share-alt"
+          name="i-ph-share-network-light"
           class="h-5 w-5 text-gray-800 transition-transform duration-300 group-hover:scale-110 dark:text-gray-200"
         />
       </button>

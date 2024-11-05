@@ -19,7 +19,7 @@ const currentYear = new Date()
           href="https://twitter.com/TeshaneCrawford"
         >
           <Icon
-            name="i-uil-twitter-alt"
+            name="i-ph-x-logo"
             class="h-5 w-5 dark:fill-white"
           />
         </a>
@@ -28,7 +28,7 @@ const currentYear = new Date()
           target="_blank"
           href="https://github.com/TeshaneCrawford"
         ><Icon
-          name="uil-github-alt"
+          name="i-ph-github-logo"
           class="h-5 w-5 dark:fill-white"
         />
         </a>
@@ -38,7 +38,7 @@ const currentYear = new Date()
           href="/feed.xml"
           title="RSS Feed"
         ><Icon
-          name="i-uil-rss"
+          name="i-ph-rss"
           class="h-5 w-5 dark:fill-white"
         />
         </a>

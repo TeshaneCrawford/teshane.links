@@ -58,13 +58,13 @@ function toggleDark(event: MouseEvent) {
       <ColorScheme>
         <template v-if="colorMode.value === 'dark'">
           <div
-            i-line-md-moon-twotone
+            i-ph-moon-stars
             class="icon--on icon h-5 w-5"
           />
         </template>
         <template v-else>
           <div
-            i-line-md-sunny-outline-loop
+            i-ph-sun-dim
             class="icon--on icon h-5 w-5"
           />
         </template>
