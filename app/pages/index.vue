@@ -4,6 +4,7 @@
   <div>
     <AppHeader />
     <AppSection />
+    <AppFooter />
   </div>
 </template>
 
