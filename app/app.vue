@@ -5,6 +5,11 @@ const siteDesc = siteConfig.value?.meta?.description || 'Teshane Crawford is a s
 const siteUrl = 'https://teshanecrawford.me'
 const siteImage = siteConfig.value?.meta?.image?.src || '/ogImage.jpeg'
 
+const twitterHandle = computed(() => {
+  const xAccount = siteConfig.value?.socials?.find((social: { platform: string }) => social.platform === 'X')
+  return xAccount ? '@TeshaneCrawford' : '@TeshaneCrawford'
+})
+
 useHead({
   bodyAttrs: {
     class: 'font-sans antialiased text-neutral-6 dark:text-neutral-2',
@@ -39,8 +44,8 @@ useHead({
 
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:site', content: siteConfig.value?.socials?.twitter || '@TeshaneCrawford' },
-    { name: 'twitter:creator', content: siteConfig.value?.socials?.twitter || '@TeshaneCrawford' },
+    { name: 'twitter:site', content: twitterHandle.value },
+    { name: 'twitter:creator', content: twitterHandle.value },
     { name: 'twitter:title', content: `Links - ${siteName}` },
     { name: 'twitter:description', content: siteDesc },
     { name: 'twitter:image', content: siteImage },
