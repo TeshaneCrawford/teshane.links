@@ -2,8 +2,8 @@
 const { data: siteConfig } = await useFetch('/api/siteConfig')
 const siteName = siteConfig.value?.name || 'Teshane Crawford'
 const siteDesc = siteConfig.value?.meta?.description || 'Teshane Crawford is a software engineer who specializes in building web applications using modern technologies.'
-const siteUrl = siteConfig.value?.url || 'https://teshanecrawford.me'
-const siteImage = siteConfig.value?.image || '/ogImage.jpeg'
+const siteUrl = 'https://teshanecrawford.me'
+const siteImage = siteConfig.value?.meta?.image?.src || '/ogImage.jpeg'
 
 useHead({
   bodyAttrs: {
@@ -35,7 +35,7 @@ useHead({
     { property: 'og:image:height', content: '630' },
     { property: 'og:image:alt', content: `${siteName}'s profile picture` },
     { property: 'og:url', content: siteUrl },
-    { property: 'og:locale', content: siteConfig.value?.locale || 'en_US' },
+    { property: 'og:locale', content: 'en_US' },
 
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
