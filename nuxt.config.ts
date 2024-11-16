@@ -3,7 +3,6 @@ import process from 'node:process'
 const name = process.env.LINK_NAME || 'Teshane Crawford'
 const website = process.env.WEBSITE_DOMAIN || 'https://teshanecrawford.me'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
@@ -41,7 +40,6 @@ export default defineNuxtConfig({
       viewport: 'width=device-width,initial-scale=1',
       link: [
         { rel: 'icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'alternate', type: 'application/rss+xml', title: `${name}'s links`, href: '/feed.xml' },
       ],
       meta: [
@@ -49,10 +47,10 @@ export default defineNuxtConfig({
         { name: 'description', content: `${name}'s links` },
         { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
         { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
-        { property: 'og:image', content: `${website}/og.png` },
+        { property: 'og:image', content: `${website}/ogImage.jpeg` },
         { property: 'og:image:alt', content: `${name} Links.` },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: `${website}/og.png` },
+        { name: 'twitter:image', content: `${website}/ogImage.jpeg` },
         { name: 'twitter:image:alt', content: `${name} Links.` },
       ],
     },
