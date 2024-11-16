@@ -2,6 +2,8 @@
 const { data: siteConfig } = await useFetch('/api/siteConfig')
 const siteName = siteConfig.value?.name || 'Teshane Crawford'
 const siteDesc = siteConfig.value?.meta?.description || 'Teshane Crawford is a software engineer who specializes in building web applications using modern technologies.'
+const siteUrl = siteConfig.value?.url || 'https://teshanecrawford.me'
+const siteImage = siteConfig.value?.image || '/ogImage.jpeg'
 
 useHead({
   bodyAttrs: {
@@ -27,21 +29,21 @@ useHead({
     { property: 'og:site_name', content: siteName },
     { property: 'og:title', content: `Links - ${siteName}` },
     { property: 'og:description', content: siteDesc },
-    { property: 'og:image', content: '/ogImage.jpeg' },
+    { property: 'og:image', content: siteImage },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
     { property: 'og:image:alt', content: `${siteName}'s profile picture` },
-    { property: 'og:url', content: 'https://teshanecrawford.me' },
-    { property: 'og:locale', content: 'en_US' },
+    { property: 'og:url', content: siteUrl },
+    { property: 'og:locale', content: siteConfig.value?.locale || 'en_US' },
 
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:site', content: '@TeshaneCrawford' },
-    { name: 'twitter:creator', content: '@TeshaneCrawford' },
+    { name: 'twitter:site', content: siteConfig.value?.social?.twitter || '@TeshaneCrawford' },
+    { name: 'twitter:creator', content: siteConfig.value?.social?.twitter || '@TeshaneCrawford' },
     { name: 'twitter:title', content: `Links - ${siteName}` },
     { name: 'twitter:description', content: siteDesc },
-    { name: 'twitter:image', content: '/ogImage.jpeg' },
+    { name: 'twitter:image', content: siteImage },
     { name: 'twitter:image:alt', content: `${siteName}'s profile picture` },
 
     // Additional SEO

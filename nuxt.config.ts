@@ -1,7 +1,9 @@
 import process from 'node:process'
+import { AppConfig } from './server/util/site'
 
 const name = process.env.LINK_NAME || 'Teshane Crawford'
 const website = process.env.WEBSITE_DOMAIN || 'https://teshanecrawford.me'
+const description = 'Software Developer specializing in web applications using modern technologies'
 
 export default defineNuxtConfig({
   future: {
@@ -31,6 +33,7 @@ export default defineNuxtConfig({
     public: {
       name,
       website,
+      description,
     },
   },
 
@@ -43,15 +46,27 @@ export default defineNuxtConfig({
         { rel: 'alternate', type: 'application/rss+xml', title: `${name}'s links`, href: '/feed.xml' },
       ],
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: `${name}'s links` },
-        { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
-        { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
-        { property: 'og:image', content: `${website}/ogImage.jpeg` },
-        { property: 'og:image:alt', content: `${name} Links.` },
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width,initial-scale=1' },
+        { name: 'description', content: description },
+
+        // Open Graph / Facebook
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: website },
+        { property: 'og:title', content: `${name} Links` },
+        { property: 'og:description', content: description },
+        { property: 'og:image', content: website + AppConfig.meta.image.src },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt', content: AppConfig.meta.image.alt },
+
+        // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: `${website}/ogImage.jpeg` },
-        { name: 'twitter:image:alt', content: `${name} Links.` },
+        { name: 'twitter:url', content: website },
+        { name: 'twitter:title', content: `${name} Links` },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:image', content: website + AppConfig.meta.image.src },
+        { name: 'twitter:image:alt', content: AppConfig.meta.image.alt },
       ],
     },
   },

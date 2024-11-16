@@ -5,7 +5,7 @@ export const AppConfig: SiteConfig = {
     title: 'Teshane Crawford',
     description: 'This is my links.',
     image: {
-      src: 'https://github.com/TeshaneCrawford.png',
+      src: '/ogImage.jpeg',
       alt: 'Teshane Crawford',
     },
   },
