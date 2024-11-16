@@ -27,7 +27,10 @@ useHead({
     { property: 'og:site_name', content: siteName },
     { property: 'og:title', content: `Links - ${siteName}` },
     { property: 'og:description', content: siteDesc },
-    { property: 'og:image', content: siteConfig.value?.headshot || 'https://github.com/TeshaneCrawford.png' },
+    { property: 'og:image', content: '/public/ogImage.jpeg' },
+    { property: 'og:image:type', content: 'image/jpeg' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
     { property: 'og:image:alt', content: `${siteName}'s profile picture` },
     { property: 'og:url', content: 'https://teshanecrawford.me' },
     { property: 'og:locale', content: 'en_US' },
@@ -38,7 +41,7 @@ useHead({
     { name: 'twitter:creator', content: '@TeshaneCrawford' },
     { name: 'twitter:title', content: `Links - ${siteName}` },
     { name: 'twitter:description', content: siteDesc },
-    { name: 'twitter:image', content: siteConfig.value?.headshot || 'https://github.com/TeshaneCrawford.png' },
+    { name: 'twitter:image', content: '/public/ogImage.jpeg' },
     { name: 'twitter:image:alt', content: `${siteName}'s profile picture` },
 
     // Additional SEO
