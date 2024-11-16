@@ -27,7 +27,7 @@ useHead({
     { property: 'og:site_name', content: siteName },
     { property: 'og:title', content: `Links - ${siteName}` },
     { property: 'og:description', content: siteDesc },
-    { property: 'og:image', content: '/public/ogImage.jpeg' },
+    { property: 'og:image', content: '/ogImage.jpeg' },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
@@ -41,7 +41,7 @@ useHead({
     { name: 'twitter:creator', content: '@TeshaneCrawford' },
     { name: 'twitter:title', content: `Links - ${siteName}` },
     { name: 'twitter:description', content: siteDesc },
-    { name: 'twitter:image', content: '/public/ogImage.jpeg' },
+    { name: 'twitter:image', content: '/ogImage.jpeg' },
     { name: 'twitter:image:alt', content: `${siteName}'s profile picture` },
 
     // Additional SEO
