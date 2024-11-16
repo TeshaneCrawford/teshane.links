@@ -39,8 +39,8 @@ useHead({
 
     // Twitter Card
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:site', content: siteConfig.value?.social?.twitter || '@TeshaneCrawford' },
-    { name: 'twitter:creator', content: siteConfig.value?.social?.twitter || '@TeshaneCrawford' },
+    { name: 'twitter:site', content: siteConfig.value?.socials?.twitter || '@TeshaneCrawford' },
+    { name: 'twitter:creator', content: siteConfig.value?.socials?.twitter || '@TeshaneCrawford' },
     { name: 'twitter:title', content: `Links - ${siteName}` },
     { name: 'twitter:description', content: siteDesc },
     { name: 'twitter:image', content: siteImage },
