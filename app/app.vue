@@ -12,7 +12,7 @@ const twitterHandle = computed(() => {
 
 useHead({
   bodyAttrs: {
-    class: 'font-sans antialiased text-neutral-6 dark:text-neutral-2',
+    class: 'font-sans antialiased text-gray-11',
   },
   htmlAttrs: {
     lang: 'en',
