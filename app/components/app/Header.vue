@@ -19,7 +19,7 @@ const { data: AppConfig } = await useFetch('/api/siteConfig')
         class="flex flex-col"
       >
         <span class="font-semibold">{{ AppConfig?.name }}</span>
-        <span class="text-neutral-400">{{ AppConfig?.title }}</span>
+        <span class="text-gray-10">{{ AppConfig?.title }}</span>
       </div>
     </div>
     <!-- Desktop -->

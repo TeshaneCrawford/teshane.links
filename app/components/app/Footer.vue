@@ -1,12 +1,16 @@
 <script lang="ts" setup>
 const currentYear = new Date()
+
+const socialLinks = [
+  { href: 'https://twitter.com/TeshaneCrawford', icon: 'i-ph-x-logo', title: 'Twitter' },
+  { href: 'https://github.com/TeshaneCrawford', icon: 'i-ph-github-logo', title: 'GitHub' },
+  { href: '/feed.xml', icon: 'i-ph-rss', title: 'RSS Feed' },
+]
 </script>
 
 <template>
   <footer>
-    <div
-      class="mx-auto max-w-4xl flex items-center justify-between border-t border-[#c7c7c7] px-4 pb-5 pt-5 dark:border-[#34343a] lg:px-0"
-    >
+    <div class="mx-auto max-w-4xl flex items-center justify-between border-t border-gray-6 px-4 pb-5 pt-5 dark:border-gray-6 lg:px-0">
       <p class="flex-inline items-center">
         © {{ currentYear.getFullYear() }} Teshane Crawford
         <br class="sm:hidden">
@@ -14,33 +18,17 @@ const currentYear = new Date()
 
       <div class="flex items-center">
         <a
-          class="mr-3"
+          v-for="link in socialLinks"
+          :key="link.href"
+          :href="link.href"
+          :title="link.title"
           target="_blank"
-          href="https://twitter.com/TeshaneCrawford"
+          class="mr-3"
         >
           <Icon
-            name="i-ph-x-logo"
-            class="h-5 w-5 dark:fill-white"
+            :name="link.icon"
+            class="text-gray-11 hover:text-gray-12 h-5 w-5"
           />
-        </a>
-        <a
-          class="mr-3"
-          target="_blank"
-          href="https://github.com/TeshaneCrawford"
-        ><Icon
-          name="i-ph-github-logo"
-          class="h-5 w-5 dark:fill-white"
-        />
-        </a>
-        <a
-          class="mr-3"
-          target="_blank"
-          href="/feed.xml"
-          title="RSS Feed"
-        ><Icon
-          name="i-ph-rss"
-          class="h-5 w-5 dark:fill-white"
-        />
         </a>
         <a><AppThemeSwitch /></a>
       </div>
